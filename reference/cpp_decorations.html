@@ -119,18 +119,26 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>pkg</th>
-      <td><p>A package, see [devtools::as.package()]</p></td>
+      <td><p>The path to a package's root directory.</p></td>
     </tr>
     <tr>
       <th>files</th>
-      <td><p>C++ files</p></td>
+      <td><p>Paths to C++ files. If given, `pkg` will not be used.</p></td>
     </tr>
     <tr>
       <th>is_attribute</th>
-      <td><p>set to true if the decorations are C++11 attributes</p></td>
+      <td><p>If `TRUE` the decorations are C++11 attributes, if `FALSE` they are comments.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A tibble with the decorations found, containing fields:
+- file - The filename for the decoration
+- line - The line the decoration was found
+- decoration - The name of the decoration
+- params - Any parameters given with the decoration
+- context - The text of the decoration line and all lines until the next decoration (or the end of the file).</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -143,7 +151,7 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Romain François, Jim Hester.</p>
+  <p>Developed by Romain François, Jim Hester, <a href='https://www.rstudio.com'><img src='https://www.tidyverse.org/rstudio-logo.svg' alt='RStudio' height='24' /></a>.</p>
 </div>
 
 <div class="pkgdown">
